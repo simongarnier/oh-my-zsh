@@ -7,10 +7,9 @@ else
     local user_host="%{$fg[white]%}->%{$reset_color%} %n@%m%{$reset_color%} "
 fi
 
-local current_dir="%{$fg[white]%}->%{$reset_color%} %~"
+local current_dir="%{$fg[white]%}->%{$reset_color%} %{$fg[blue]%}%~%{$reset_color%}"
 local git_branch='$(git_prompt_info)'
 local virtualenv='$(virtualenv_prompt_info)'
-local ruby='${current_ruby}'
 
 PROMPT="${virtualenv}${user_host}${current_dir}${git_branch}
 %{$fg[white]%}->%{$reset_color%} "
